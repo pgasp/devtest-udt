@@ -1,0 +1,15 @@
+################################
+# RULES
+################################
+
+
+################################
+# VSE Traffic Protocols
+################################
+vseProtocols=com.ca.lisa.custom.dph.xml.XMLwithAttributesToArguments
+
+################################
+# Details for VSE Traffic Protocols
+################################
+com.ca.lisa.custom.dph.xml.XMLwithAttributesToArguments=data:req,XML with attributes to Arguments,Extract XML attributes to Arguments
+

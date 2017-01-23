@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  	<modelVersion>4.0.0</modelVersion>
+  	<groupId>$devtestGroupId</groupId>
+  	<artifactId>$devtestArtifactId</artifactId>
+  	<version>$devtestVersion</version>
+  	<packaging>pom</packaging>
+  	<name>$devtestArtifactId</name>
+  	<url>http://maven.apache.org</url>
+  	 
+  	 <dependencyManagement>
+  		<dependencies>
+    	#foreach($dependency in $dependencies)
+    		<dependency>
+      			<groupId>$devtestGroupId.$dependency.groupID</groupId>
+     			<artifactId>$dependency.name</artifactId>
+				<version>$dependency.version</version>
+     			<scope>system</scope>
+      			<systemPath>${env.LISA_HOME}$dependency.location</systemPath>
+   			</dependency>
+   		#end
+  		</dependencies>
+  	</dependencyManagement>
+  </project>
