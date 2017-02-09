@@ -65,13 +65,13 @@
 			</plugin>
 		<!--	 Generate Java-Classes inkl. JAXB-Bindings from WSDL & imported XSD 
 			See Doku at http://www.mojohaus.org/jaxws-maven-plugin/usage.html-->
-		<!--	<plugin>
+		<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>jaxws-maven-plugin</artifactId>
 				<version>2.4.1</version>
 				<configuration>
 					<packageName>com.ca.devtest.lisabank.wsdl</packageName>
-					 See http://www.mojohaus.org/jaxws-maven-plugin/wsimport-mojo.html 
+				<!--  See http://www.mojohaus.org/jaxws-maven-plugin/wsimport-mojo.html  -->	
 					<wsdlUrls>
 						<wsdlUrl>http://localhost:9080/itkoExamples/EJB3UserControlBean?wsdl</wsdlUrl>
 						<wsdlUrl>http://localhost:9080/itkoExamples/EJB3AccountControlBean?wsdl</wsdlUrl>
@@ -79,7 +79,7 @@
 
 					</wsdlUrls>
 					<sourceDestDir>src/main/generated-sources/wsdlimport</sourceDestDir>
-					 For accessing the imported schema, see https://netbeans.org/bugzilla/show_bug.cgi?id=241570 
+					<!-- For accessing the imported schema, see https://netbeans.org/bugzilla/show_bug.cgi?id=241570  -->	
 					<vmArgs>
 						<vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
 					</vmArgs>
@@ -91,7 +91,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>-->
+			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>

@@ -16,7 +16,7 @@ public interface BankService {
 	/**
 	 * @return List of Users
 	 */
-	public  List<User> getListUser();
+	public  User[] getListUser();
 	
 	/**
 	 * @param username

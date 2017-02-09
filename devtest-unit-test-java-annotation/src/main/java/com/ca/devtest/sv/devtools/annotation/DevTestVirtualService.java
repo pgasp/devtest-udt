@@ -18,7 +18,7 @@ import java.lang.annotation.Target;
 @Repeatable(DevTestVirtualServices.class)
 public @interface DevTestVirtualService {
 	String serviceName();
-	int port() default 8080;
+	int port() default -1;
 	String basePath() default "/";
 	Protocol transport() default @Protocol(ProtocolType.TPH_HTTP );
 	Protocol[] requestDataProtocol() default{ } ;

@@ -74,10 +74,10 @@ public class LisaBankService implements BankService {
 	 * @see com.ca.devtest.lisabank.demo.business.BankService#getListUserWithoutAdmin()
 	 */
 	@Override
-	public  List<User> getListUser(){
+	public  User[] getListUser(){
 		
 		List<User> users= userControlBean.listUsers();
 		
-		return users;
+		return users.toArray(new User[users.size()]);
 	 }
 }

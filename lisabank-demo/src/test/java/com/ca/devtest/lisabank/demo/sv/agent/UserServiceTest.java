@@ -1,10 +1,12 @@
-package com.ca.devtest.lisabank.demo.sv;
+package com.ca.devtest.lisabank.demo.sv.agent;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.*;
 
 import java.util.List;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,6 +19,7 @@ import com.ca.devtest.lisabank.demo.business.BankService;
 import com.ca.devtest.lisabank.wsdl.User;
 import com.ca.devtest.sv.devtools.annotation.DevTestVirtualServer;
 import com.ca.devtest.sv.devtools.annotation.DevTestVirtualService;
+import com.ca.devtest.sv.devtools.annotation.Parameter;
 import com.ca.devtest.sv.devtools.annotation.Protocol;
 import com.ca.devtest.sv.devtools.annotation.ProtocolType;
 import com.ca.devtest.sv.devtools.junit.VirtualServicesRule;
@@ -25,22 +28,23 @@ import com.ca.devtest.sv.devtools.junit.VirtualServicesRule;
 @SpringApplicationConfiguration(classes = LisaBankClientApplication.class)
 @DevTestVirtualServer(deployServiceToVse = "VSE")
 public class UserServiceTest {
-
+	static final Log logger=LogFactory.getLog(UserServiceTest.class);
 	@Autowired
 	private BankService bankServices;
 	@Rule
 	public VirtualServicesRule rules = new VirtualServicesRule();
-	@DevTestVirtualService(serviceName = "UserServiceTest-EJB3UserControlBean", port = 9080, basePath = "/itkoExamples/EJB3UserControlBean", rrpairsFolder = "UserServiceTest/getListUser/EJB3UserControlBean", requestDataProtocol = {
-			@Protocol(ProtocolType.DPH_SOAP) })
+	
+	
 	@Test
 	public void getListUser() {
 		// Given
 
 		// When
-		List<User> users = bankServices.getListUser();
+		User[] users = bankServices.getListUser();
 		// Then
+		printUsers(users);
 		assertNotNull(users);
-		assertEquals(9, users.size());
+		assertEquals(9, users.length);
 		
 		User user=getUser("Admin", users);
 		assertNotNull(user);
@@ -50,29 +54,20 @@ public class UserServiceTest {
 	}
 	
 
-	@Test
-	public void getListUserKO() {
-		// Given
-
-		// When
-		List<User> users = bankServices.getListUser();
-		// Then
-		assertNotNull(users);
-		assertNotEquals(9, users.size());
-		
-		User user=getUser("Piece", users);
-		assertNotNull(user);
-		
-		assertEquals("Piece", user.getLname());
-
+	private void printUsers(User[] users) {
+	for (User user : users) {
+		logger.info(user.getFname() +" "+user.getLname() +" "+ user.getLogin());
 	}
-	
+		
+	}
+
+
 	/**
 	 * @param name
 	 * @param users
 	 * @return
 	 */
-	private User getUser(String name,List<User> users ){
+	private User getUser(String name,User[] users ){
 		
 		User result= null;
 		for (User user : users) {

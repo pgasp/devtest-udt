@@ -24,6 +24,7 @@ import com.ca.devtest.sv.devtools.annotation.Parameter;
 import com.ca.devtest.sv.devtools.annotation.Protocol;
 import com.ca.devtest.sv.devtools.protocol.builder.DataProtocolBuilder;
 import com.ca.devtest.sv.devtools.protocol.builder.ProtocolBuilder;
+import com.ca.devtest.sv.devtools.protocol.builder.TransportProtocolBuilder;
 import com.ca.devtest.sv.devtools.services.VirtualService;
 import com.ca.devtest.sv.devtools.services.builder.VirtualServiceBuilder;
 
@@ -168,18 +169,20 @@ public class VirtualServicesRule implements TestRule {
 		URL url = getClass().getClassLoader().getResource(virtualService.rrpairsFolder());
 		File rrPairsFolder = new File(url.toURI());
 		VirtualServiceBuilder<?> virtualServiceBuilder = devTestClient
-				.fromRRPairs(virtualService.serviceName(), rrPairsFolder)
-				.overHttp(virtualService.port(), virtualService.basePath());
+				.fromRRPairs(virtualService.serviceName(), rrPairsFolder);
+		if(-1!=virtualService.port()){
+			virtualServiceBuilder.overHttp(virtualService.port(), virtualService.basePath());
+		}else{
+			// build Transport Protocol
+			 TransportProtocolBuilder transportBuilder = new TransportProtocolBuilder(virtualService.transport().value());
+			 Parameter[] transportParam = virtualService.transport().parameters();
+			 addParamesToBuilder(transportBuilder, transportParam);
 
-		// build Transport Protocol
-		// TransportProtocolBuilder transportBuilder = new
-		// TransportProtocolBuilder(virtualServiceHTTP.transport().type());
-		// Parameter[] transportParam =
-		// virtualServiceHTTP.transport().parameters();
-		// ddParamesToBuilder(transportBuilder, transportParam);
+			// add Transport Protocol
+			 virtualServiceBuilder.over(transportBuilder.build());
+		}
 
-		// add Transport Protocol
-		// virtualServiceBuilder.over(transportBuilder.build());
+	
 
 		// build List of RequestDataProtocol
 		Protocol[] requestDataProtocol = virtualService.requestDataProtocol();

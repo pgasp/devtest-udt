@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.ca.devtest.lisabank.demo.sv;
+package com.ca.devtest.lisabank.demo.sv.http;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -52,7 +52,7 @@ public class AccountServiceTest {
 		String password = "password";
 		int amount = 1000;
 		// prepare context
-		bankServices.deleteUser(user);
+		//bankServices.deleteUser(user);
 		// When
 		Account account = bankServices.createUserWithCheckingAccount(user, password, amount);
 		// Then

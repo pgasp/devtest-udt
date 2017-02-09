@@ -1,0 +1,332 @@
+<div id="ppm_app" class="ppm_page_bg">
+	<div class="ppm_header" role="banner">
+		<table role="presentation" cellspacing="0" cellpadding="0">
+			<tbody>
+				<tr>
+					<td>
+						<img id="ppm_header_logo" src="ui/uitk/images/s.gif" alt="CA">
+					</td>
+					<td id="ppm_header_product">
+						<span></span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="ppm_header_links">
+			<img src="ui/uitk/images/s.gif" class="caui-headerWait" id="ppm_header_wait"
+				style="margin-right: 6px; display: none;" alt="wait">
+				<a id="ppm_user_profile" href="#" style="text-decoration: none">
+					<div class="avatar-circle-sml">
+						<div class="intials">PG</div>
+					</div>
+				</a>
+				<span id="ppm_header_user">Pascal Gasp</span>
+				<a id="ppm_header_logout" href="#">Logout</a>
+				<a id="ppm_header_learn" href="#" class="ppm_header_links_div">Learn</a>
+				<a id="ppm_header_help" href="#" class="ppm_header_links_div">Help</a>
+				<a id="ppm_header_about" href="#" class="ppm_header_links_div">About</a>
+		</div>
+	</div>
+	<div id="ppm_omnibar" role="navigation">
+		<button id="ppm_history_back" title="Back" alt="Back">
+			<img src="ui/uitk/images/s.gif" alt="Back">
+		</button>
+		<span id="ppm_history_dd" title="Recent Pages" alt="Recent Pages"
+			role="button" aria-pressed="false" tabindex="0">
+			<img src="ui/uitk/images/s.gif" alt="Recent Pages">
+				<div id="ppm_history_menu" tabindex="0">
+					<a href="#action:timeadmin.deleteTimeEntriesConfirmPage" title="Delete Time Entry Confirmation"
+						data-ppm_page_context="">Delete Time Entry Confirmation</a>
+					<a
+						href="#action:timeadmin.editTimesheet&amp;id=6011332&amp;resid=5195051&amp;tpid=5005367"
+						title="Timesheet" data-ppm_page_context="">Timesheet</a>
+					<a href="#action:timeadmin.selectTimesheetTaskOpt&amp;id=6011332"
+						title="Resource: Gasp, Pascal | Time Period: 08/01/17 - 14/01/17 - Select Tasks"
+						data-ppm_page_context="Resource: Gasp, Pascal | Time Period: 08/01/17 - 14/01/17">Resource: Gasp, Pascal | Time Period:
+						08/01/17 - 14/01/17 - Select Tasks</a>
+					<a href="#action:timeadmin.editTimesheet&amp;id=6011332" title="Timesheet"
+						data-ppm_page_context="">Timesheet</a>
+					<a href="#action:timeadmin.deleteTimeEntriesConfirmPage" title="Delete Time Entry Confirmation"
+						data-ppm_page_context="">Delete Time Entry Confirmation</a>
+					<a href="#action:timeadmin.editTimesheetReturn" title="Timesheet"
+						data-ppm_page_context="">Timesheet</a>
+					<a href="#action:timeadmin.deleteTimeEntriesConfirmPage" title="Delete Time Entry Confirmation"
+						data-ppm_page_context="">Delete Time Entry Confirmation</a>
+					<a href="#action:timeadmin.editTimesheet&amp;id=6011332" title="Timesheet"
+						data-ppm_page_context="">Timesheet</a>
+					<a href="#action:timeadmin.selectTimesheetTaskOpt&amp;id=6011332"
+						title="Resource: Gasp, Pascal | Time Period: 08/01/17 - 14/01/17 - Select Tasks"
+						data-ppm_page_context="Resource: Gasp, Pascal | Time Period: 08/01/17 - 14/01/17">Resource: Gasp, Pascal | Time Period:
+						08/01/17 - 14/01/17 - Select Tasks</a>
+					<a href="#action:timeadmin.editTimesheetReturn" title="Timesheet"
+						data-ppm_page_context="">Timesheet</a>
+					<a href="#action:timeadmin.deleteTimeEntriesConfirmPage" title="Delete Time Entry Confirmation"
+						data-ppm_page_context="">Delete Time Entry Confirmation</a>
+					<a href="#action:timeadmin.editTimesheet&amp;id=6011332" title="Timesheet"
+						data-ppm_page_context="">Timesheet</a>
+					<a href="#action:timeadmin.selectTimesheetTaskOpt&amp;id=6011332"
+						title="Resource: Gasp, Pascal | Time Period: 08/01/17 - 14/01/17 - Select Tasks"
+						data-ppm_page_context="Resource: Gasp, Pascal | Time Period: 08/01/17 - 14/01/17">Resource: Gasp, Pascal | Time Period:
+						08/01/17 - 14/01/17 - Select Tasks</a>
+					<a href="#action:timeadmin.editTimesheetReturn" title="Timesheet"
+						data-ppm_page_context="">Timesheet</a>
+					<a href="#action:timeadmin.deleteTimeEntriesConfirmPage" title="Delete Time Entry Confirmation"
+						data-ppm_page_context="">Delete Time Entry Confirmation</a>
+					<a href="#action:timeadmin.editTimesheet&amp;id=6011332" title="Timesheet"
+						data-ppm_page_context="">Timesheet</a>
+					<a href="#action:timeadmin.selectTimesheetTaskOpt&amp;id=6011332"
+						title="Resource: Gasp, Pascal | Time Period: 08/01/17 - 14/01/17 - Select Tasks"
+						data-ppm_page_context="Resource: Gasp, Pascal | Time Period: 08/01/17 - 14/01/17">Resource: Gasp, Pascal | Time Period:
+						08/01/17 - 14/01/17 - Select Tasks</a>
+					<a
+						href="#action:timeadmin.editTimesheet&amp;resid=5195051&amp;tpid=5005372"
+						title="Timesheet" data-ppm_page_context="">Timesheet</a>
+					<a href="#action:npt.overview" title="Overview: General"
+						data-ppm_page_context="">Overview: General</a>
+				</div>
+		</span>
+		<span id="ppm_nav_app" class="ppm_nav_menu" role="menu" tabindex="0"
+			alt="Home">
+			Home
+			<span id="ppm_nav_app_menu" class="ppm_umenu" style="height: auto; display: none;">
+				<div>
+					<button class="ppm_umenu_page_left ppm_umenu_page_disabled">◀ Previous</button>
+					<button class="ppm_umenu_page_right">Next ▶</button>
+				</div>
+				<table role="presentation">
+					<tbody>
+						<tr>
+							<td class="ppm_umenu_section">
+								<div class="ppm_umenu_section_title">Personal</div>
+								<a href="#action:npt.overview" title=" General"
+									onclick="return showJasperConfirm()"> General</a>
+								<a href="#action:calendar.organizerHome" title="Organizer"
+									onclick="return showJasperConfirm()">Organizer</a>
+								<a href="#action:timeadmin.timesheetBrowserReturn" title="Timesheets"
+									onclick="return showJasperConfirm()">Timesheets</a>
+								<a href="#action:nmc.reportAccess" title="Reports and Jobs"
+									onclick="return showJasperConfirm()">Reports and Jobs</a>
+								<a href="#action:personal.settings" title="Account Settings"
+									onclick="return showJasperConfirm()">Account Settings</a>
+							</td>
+							<td class="ppm_umenu_section">
+								<div class="ppm_umenu_section_title">CA Services Portlets</div>
+								<a href="#action:ca_svcs_stppg_TimeOvView" title="Time Overview"
+									onclick="return showJasperConfirm()">Time Overview</a>
+								<a href="#action:ca_svcs_stppg_RMProperty" title="ResMgt-Properties"
+									onclick="return showJasperConfirm()">ResMgt-Properties</a>
+								<a href="#action:ca_svcs_stppg_RMskill" title="ResMgt-Skills"
+									onclick="return showJasperConfirm()">ResMgt-Skills</a>
+								<a href="#action:ca_svcs_ssc_dash" title=" SSC Dashboard"
+									onclick="return showJasperConfirm()"> SSC Dashboard</a>
+							</td>
+							<td class="ppm_umenu_section">
+								<div class="ppm_umenu_section_title">Organization</div>
+								<a href="#action:dms.KSFileManager&amp;id=1010&amp;type=KS"
+									title="Knowledge Store" onclick="return showJasperConfirm()">Knowledge Store</a>
+							</td>
+							<td class="ppm_umenu_section">
+								<div class="ppm_umenu_section_title">Portfolio Management</div>
+								<a href="#action:mainnav.work&amp;classCode=project" title="Projects"
+									onclick="return showJasperConfirm()">Projects</a>
+								<a href="#action:projmgr.others" title="Other Work"
+									onclick="return showJasperConfirm()">Other Work</a>
+							</td>
+							<td class="ppm_umenu_section">
+								<div class="ppm_umenu_section_title">Resource Management</div>
+								<a href="#action:projmgr.getResources&amp;reload=true" title="Resources"
+									onclick="return showJasperConfirm()">Resources</a>
+								<a href="#action:projmgr.capacity" title="Resource Planning"
+									onclick="return showJasperConfirm()">Resource Planning</a>
+								<a href="#action:projmgr.resourceFinderList&amp;SelectedTab=Basic"
+									title="Resource Finder" onclick="return showJasperConfirm()">Resource Finder</a>
+								<a href="#action:resource.reqList" title="Resource Requisitions"
+									onclick="return showJasperConfirm()">Resource Requisitions</a>
+							</td>
+							<td class="ppm_umenu_section">
+								<div class="ppm_umenu_section_title">Custom Objects</div>
+								<a href="#action:odf.ca_svcs_sscList" title="SSC Submit a Suggestion"
+									onclick="return showJasperConfirm()">SSC Submit a Suggestion</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div>
+					<button id="ppm_nav_set_home" class="ppm_umenu_button">Set as Home</button>
+					<button id="ppm_nav_reset_home" class="ppm_umenu_button">Reset Home</button>
+					<button class="ppm_umenu_button ppm_umenu_refresh">Refresh</button>
+				</div>
+			</span>
+		</span>
+		<img src="ui/uitk/images/s.gif" class="ppm_omnibar_div" alt="">
+			<span id="ppm_nav_admin" class="ppm_nav_menu" role="menu"
+				tabindex="0" alt="Administration">Administration</span>
+			<img src="ui/uitk/images/s.gif" class="ppm_omnibar_div" alt="">
+				<span id="ppm_nav_favs" class="ppm_nav_menu" role="menu"
+					tabindex="0" alt="Favorites">
+					Favorites
+					<span id="ppm_nav_favs_menu" class="ppm_umenu"
+						style="height: auto; display: none;">
+						<div>
+							<button class="ppm_umenu_page_left ppm_umenu_page_disabled">◀ Previous</button>
+							<button class="ppm_umenu_page_right">Next ▶</button>
+						</div>
+						<table role="presentation">
+							<tbody>
+								<tr>
+									<td class="ppm_umenu_section">
+										<div class="ppm_umenu_section_title">My Links</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div>
+							<button class="ppm_umenu_button">Add Current</button>
+							<button class="ppm_umenu_button">Configure</button>
+							<button class="ppm_umenu_button ppm_umenu_refresh">Refresh</button>
+						</div>
+					</span>
+				</span>
+				<img src="ui/uitk/images/s.gif" class="ppm_omnibar_div" alt="">
+					<div style="float:right; margin-right: 8px;">
+						<button id="ppm_refresh" class="ppm_omnibar_button" title="Refresh"
+							alt="Refresh">
+							<img src="ui/uitk/images/s.gif" alt="Refresh">
+						</button>
+						<button id="ppm_home_go" class="ppm_omnibar_button" title="Home"
+							alt="Home">
+							<img src="ui/uitk/images/s.gif" alt="Home">
+						</button>
+						<button id="ppm_timesheet" class="ppm_omnibar_button"
+							title="Current Timesheet" alt="Current Timesheet">
+							<img src="ui/uitk/images/s.gif" alt="Current Timesheet">
+						</button>
+						<span id="ppm_search_con" role="search">
+							<a id="ppm_search_advanced"
+								href="#action:search.advancedSearchForm&amp;includeFileContents=true&amp;objectTypeId=4&amp;objectTypeId=7&amp;objectTypeId=3&amp;objectTypeId=1&amp;objectTypeId=11&amp;allUsers=true&amp;backAction=homeActionId"
+								title="Advanced">Advanced</a>
+							<div id="ppm_search_box">
+								<form style="display: inline" name="search.basicSearchForm"
+									method="POST" onsubmit="return false;">
+									<input id="ppm_search_text" name="searchKeywords" title="Search"
+										type="text">
+										<input id="ppm_search_box_tokens" name="superSecretTokenKey"
+											value="superSecretTokenValue" type="hidden">
+								</form>
+								<button id="ppm_search_submit" title="Search" alt="Search">
+									<img src="ui/uitk/images/s.gif" alt="Search">
+								</button>
+							</div>
+						</span>
+						<button id="ppm_search" class="ppm_omnibar_button" title="Search"
+							alt="Search">
+							<img src="ui/uitk/images/s.gif" alt="Search">
+						</button>
+					</div>
+	</div>
+	<div class="ppm_tabs" role="tablist"></div>
+	<div id="ppm_workspace" class="ppm_workspace_bg" role="main"
+		style="top: 80px; left: 0px; bottom: 0px;">
+		<div xmlns:wid="java:com.niku.union.xsl.WidgetIdExt" class="ppm_uixsl_root ppm_fixed_buttons">
+			<div id="scriptReplace_1" class="scriptReplace_1"></div>
+			<div class="ppm_workspace_title_row">
+				<h1 class="ppm_workspace_title" tabindex="0" id="d12003342e1"
+					alt="Delete Time Entry Confirmation" title="Delete Time Entry Confirmation">Delete Time Entry
+					Confirmation</h1>
+			</div>
+			<div class="ppm_page_content" id="ppm_page_contents">
+				<table class="ppm_portlets" role="presentation"
+					pagetitle="Delete Time Entry Confirmation" pagecontext="" width="100%"
+					cellspacing="0" cellpadding="0" border="0">
+					<tbody>
+						<tr id="portletRow">
+							<td class="ppm_centerPortletColumn" width="100%" valign="top">
+								<table role="presentation" width="100%" cellspacing="0"
+									cellpadding="0" border="0">
+									<tbody>
+										<tr>
+											<td width="100%">
+												<div id="portlet-timeadmin.deleteTimeEntriesConfirm"
+													actionid="timeadmin.deleteTimeEntriesConfirmPage" class="ppm_portlet">
+													<div>
+														<table role="presentation" width="100%" cellspacing="0"
+															cellpadding="0" border="0">
+															<tbody>
+																<tr>
+																	<td colspan="3">
+																		<div class="ppm_error" aria-live="rude"
+																			aria-atomic="true" role="alert" id="pageError-page"></div>
+																		<div class="ppm_alert" aria-live="rude"
+																			aria-atomic="true" role="alert" id="pageAlert-page">
+																			<div id="ppm_alert_page_level" tabindex="0">
+																				<img src="ui/uitk/images/s.gif" class="caui-commonAlert"
+																					alt="Alert" title="Alert" align="absmiddle">
+																					<span>Alert:</span>Delete
+																					the selected time entries?&nbsp;
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td colspan="3">
+																		<form name="page" method="POST"
+																			id="c6d0eca8-0be8-4480-a444-ce3dd899f741"
+																			autocomplete="off" type="form" action="nu" onsubmit="return false;">
+																			<div>
+																				<table role="presentation" class="ppm_portlet_data"
+																					width="100%" cellspacing="0" cellpadding="0"
+																					border="0">
+																					<tbody>
+																						<tr>
+																							<td style="position: relative;">
+																								<div class="ppm_gridcontent" id="d12003342e6">
+																									<table class="ppm_grid" role="grid"
+																										width="100%" cellspacing="0" cellpadding="0"
+																										border="0">
+																										<tbody
+																											id="d12003342e6_tbody_cb9505fc-5f99-4e84-a3df-cb3ea73f86d5"
+																											type="content" listviewdivid="d12003342e6"
+																											class="ppm_grid_content" tabindex="-1"
+																											onclick="javascript:clarity.uitk.widgets.grid.builder.ListViewBuilder.listViewOnContentEvent(this,event,true);"
+																											onfocus="javascript:clarity.uitk.widgets.grid.builder.ListViewBuilder.listViewOnContentEvent(this,event,false);"
+																											onblur="javascript:clarity.uitk.widgets.grid.builder.ListViewBuilder.listViewOnContentEvent(this,event,false);"
+																											onkeydown="javascript:clarity.uitk.widgets.grid.builder.ListViewBuilder.listViewOnContentEvent(this,event,false);"></tbody>
+																									</table>
+																								</div>
+																							</td>
+																						</tr>
+																					</tbody>
+																				</table>
+																				<div class="ppm_button_bar">
+																					<button xmlns:urlencoder="java:java.net.URLEncoder"
+																						type="button"
+																						onclick="submitForm('page','timeadmin.saveTimesheetGet');"
+																						style="  " class="ppm_button ">Yes</button>
+																					<button xmlns:urlencoder="java:java.net.URLEncoder"
+																						type="button"
+																						onclick="navigateToURL('nu?action=timeadmin.editTimesheetReturn');"
+																						style="  " class="ppm_button ">No</button>
+																				</div>
+																			</div>
+																			<input name="superSecretTokenKey" value="superSecretTokenValue"
+																				type="hidden">
+																		</form>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div id="ppm_workspace_bb" class="ppm_fixed_button_bar" style="display: none;"></div>
+</div>
