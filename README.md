@@ -20,9 +20,9 @@ TODO
 
 ## Contributors
 
-- Pascal Gasp *Sr Devops Architect @ CA Technologies*
-- Vincent Mazot *Sr Consultant @ CA Technologies*
-- Olivier Laplace  *Sr Principal Consultant, Presales @ CA Technologies*
+- Pascal Gasp *Sr Architect Devops @ CA Technologies*
+- Vincent Mazot *Sr Consultant Devops @ CA Technologies*
+- Olivier Laplace  *Sr Presales Devops @ CA Technologies*
 
 ## License
 
