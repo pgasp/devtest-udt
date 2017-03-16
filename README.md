@@ -7,24 +7,24 @@ To run this project you should have DevTest Server up and running and pointing o
 
 ## Code Example
 
-	// Refer to DevTest Server
-	@DevTestVirtualServer(deployServiceToVse = "VSE")
-	public class UserServiceTest {
-	// Use this rules to parse your annotation
-	@Rule
-	public VirtualServicesRule rules = new VirtualServicesRule();
-	//Define  SOAP Virtual named :EJB3UserControlBean listned on port: 9080 
-	// Path of service is : /itkoExamples/EJB3UserControlBean
-	// use RR pairs files located in classpath folder : UserServiceTest/getListUser/EJB3UserControlBean
-	@DevTestVirtualService(serviceName = "EJB3UserControlBean", port = 9080, 
-	basePath = "/itkoExamples/EJB3UserControlBean",
-	rrpairsFolder = "UserServiceTest/getListUser/EJB3UserControlBean", 
-	requestDataProtocol = {@Protocol(ProtocolType.DPH_SOAP) })
-	@Test
-	public void getListUser() {
-		// Given
+	@RunWith(SpringJUnit4ClassRunner.class)
+	@SpringApplicationConfiguration(classes = LisaBankClientApplication.class)
+	@DevTestVirtualServer(registryHost="localhost" , deployServiceToVse = "VSE")
 
-		// When
+	public class UserServiceTest {
+		static final Log logger=LogFactory.getLog(UserServiceTest.class);
+		@Autowired
+		private BankService bankServices;
+		@Rule
+		public VirtualServicesRule rules = new VirtualServicesRule();
+	
+		@DevTestVirtualService(serviceName = "UserServiceTest-EJB3UserControlBean", 
+			port = 9080, basePath = "/itkoExamples/EJB3UserControlBean",
+			rrpairsFolder = "UserServiceTest/getListUser/EJB3UserControlBean", 
+			requestDataProtocol = {@Protocol(ProtocolType.DPH_SOAP) })
+		@Test
+		public void getListUser() {
+		
 		User[] users = bankServices.getListUser();
 		// Then
 		printUsers(users);
