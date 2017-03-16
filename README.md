@@ -7,18 +7,19 @@ To run this project you should have DevTest Server up and running and pointing o
 
 ## Code Example
 
-{
-
-@DevTestVirtualServer(deployServiceToVse = "VSE")
-public class UserServiceTest {
-	
+	// Refer to DevTest Server
+	@DevTestVirtualServer(deployServiceToVse = "VSE")
+	public class UserServiceTest {
+	// Use this rules to parse your annotation
 	@Rule
 	public VirtualServicesRule rules = new VirtualServicesRule();
-	
-	@DevTestVirtualService(serviceName = "UserServiceTest-EJB3UserControlBean", 
-			port = 9080, basePath = "/itkoExamples/EJB3UserControlBean",
-			rrpairsFolder = "UserServiceTest/getListUser/EJB3UserControlBean", 
-			requestDataProtocol = {@Protocol(ProtocolType.DPH_SOAP) })
+	//Define  SOAP Virtual named :EJB3UserControlBean listned on port: 9080 
+	// Path of service is : /itkoExamples/EJB3UserControlBean
+	// use RR pairs files located in classpath folder : UserServiceTest/getListUser/EJB3UserControlBean
+	@DevTestVirtualService(serviceName = "EJB3UserControlBean", port = 9080, 
+	basePath = "/itkoExamples/EJB3UserControlBean",
+	rrpairsFolder = "UserServiceTest/getListUser/EJB3UserControlBean", 
+	requestDataProtocol = {@Protocol(ProtocolType.DPH_SOAP) })
 	@Test
 	public void getListUser() {
 		// Given
@@ -36,56 +37,6 @@ public class UserServiceTest {
 		assertEquals("Admin", user.getLname());
 
 	}
-	
-	
-	@DevTestVirtualService(serviceName = "UserServiceTest-EJB3UserControlBean", 
-			port = 9080, basePath = "/itkoExamples/EJB3UserControlBean",
-			rrpairsFolder = "UserServiceTest/getListUser/getListUser", 
-			requestDataProtocol = {@Protocol(ProtocolType.DPH_SOAP) })
-	@Test
-	public void getListUser2() {
-		// Given
-
-		// When
-		User[] users = bankServices.getListUser();
-		// Then
-		printUsers(users);
-		assertNotNull(users);
-		assertEquals(1, users.length);
-		
-		User user=getUser("toto", users);
-		assertNotNull(user);
-		
-		assertEquals("toto", user.getLname());
-
-	}
-	
-
-	private void printUsers(User[] users) {
-	for (User user : users) {
-		logger.info(user.getFname() +" "+user.getLname() +" "+ user.getLogin());
-	}
-		
-	}
-
-
-	/**
-	 * @param name
-	 * @param users
-	 * @return
-	 */
-	private User getUser(String name,User[] users ){
-		
-		User result= null;
-		for (User user : users) {
-			if(name.equals(user.getLname())){
-				result=user;
-			}
-				
-		}
-		return result;
-	}
-}
 	
 
 ## Motivation
