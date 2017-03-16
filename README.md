@@ -7,14 +7,12 @@ To run this project you should have DevTest Server up and running and pointing o
 
 ## Code Example
 
-	@RunWith(SpringJUnit4ClassRunner.class)
-	@SpringApplicationConfiguration(classes = LisaBankClientApplication.class)
+	
 	@DevTestVirtualServer(registryHost="localhost" , deployServiceToVse = "VSE")
 
 	public class UserServiceTest {
 		static final Log logger=LogFactory.getLog(UserServiceTest.class);
-		@Autowired
-		private BankService bankServices;
+		
 		@Rule
 		public VirtualServicesRule rules = new VirtualServicesRule();
 	
