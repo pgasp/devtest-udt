@@ -7,7 +7,7 @@ To run this project you should have DevTest Server up and running and pointing o
 
 ## Code Example
 
-	#f03c15 @RunWith(SpringJUnit4ClassRunner.class)
+	@RunWith(SpringJUnit4ClassRunner.class)
 	@SpringApplicationConfiguration(classes = LisaBankClientApplication.class)
 	@DevTestVirtualServer(registryHost="localhost" , deployServiceToVse = "VSE")
 
