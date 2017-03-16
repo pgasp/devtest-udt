@@ -7,7 +7,34 @@ To run this project you should have DevTest Server up and running and pointing o
 
 ## Code Example
 
-TODO
+@DevTestVirtualServer(deployServiceToVse = "VSE")
+public class UserServiceTest {
+	
+	@Rule
+	public VirtualServicesRule rules = new VirtualServicesRule();
+	
+	@DevTestVirtualService(serviceName = "UserServiceTest-EJB3UserControlBean", 
+			port = 9080, basePath = "/itkoExamples/EJB3UserControlBean",
+			rrpairsFolder = "UserServiceTest/getListUser/EJB3UserControlBean", 
+			requestDataProtocol = {@Protocol(ProtocolType.DPH_SOAP) })
+	@Test
+	public void getListUser() {
+		// Given
+
+		// When
+		User[] users = bankServices.getListUser();
+		// Then
+		printUsers(users);
+		assertNotNull(users);
+		assertEquals(9, users.length);
+		
+		User user=getUser("Admin", users);
+		assertNotNull(user);
+		
+		assertEquals("Admin", user.getLname());
+
+	}
+	
 
 ## Motivation
 
