@@ -1,9 +1,10 @@
 ## DevTest As Code
 
-This project provide simple annotations that can be use  in your Junit Test to deploy Virtual Services before starting your test. The scope of annotations are method that make the virtual services This annotation help to embde your Virtual Services in your source code. By this way, make your application readiness to continous integration testing without any constrains
-These anotations use DevTest Rest API and deploy your virtual services based on request/response pairs. 
-with This annotation you could be integrate complexe test scenario from your junit tests.  
-To run this project you should have DevTest Server up and running and pointing on it from DevTestVirtualServer annotation
+This project provides simple Java annotations that can be used  in your Junit Test to deploy Virtual Services before starting your test. The scope of annotations are test methods.
+This java annotation helps to embed your Virtual Services in your source code. This approach makes your application ready for continous integration testing by removing system and data constraints. Your tests become more reliable, repeatable and automated.
+With this approach, using virtual services from your Continuous intergration plateform becomes native. 
+
+
 
 ## Code Example
 
@@ -38,7 +39,7 @@ To run this project you should have DevTest Server up and running and pointing o
 	
 
 ## Motivation
-
+These java annotations will use CA DevTest Rest API to build and deploy your virtual services from request/response pairs. 
 TODO
 
 ## Installation
